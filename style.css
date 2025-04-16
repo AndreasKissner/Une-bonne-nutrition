@@ -8,12 +8,14 @@ body {
     font-size: 16px;
     font-family: monospace;
 }
-#wrapper{
+
+#wrapper {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: aquamarine;
 }
 
@@ -24,9 +26,21 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.header_style{
+.p_text-inside_overlay{
+    width: 100%;
+    max-width: 70%;
+    height: auto;
+    padding: 30px;
+
+}
+
+
+.header_style {
     width: 80%;
     height: 200px;
     background-color: rgb(216, 15, 15);
@@ -36,7 +50,7 @@ body {
     border-radius: 20px;
 }
 
-.btn_content_global{
+.btn_content_global {
     width: 100%;
     max-width: 80%;
     height: 20vh;
@@ -47,37 +61,55 @@ body {
     gap: 30px;
     border: 5px solid darkgoldenrod;
     border-radius: 20px;
-} 
+}
 
-.btn_style{
+.btn_style {
     padding: 10px;
     font-size: 24px;
     font-weight: 900;
-    border:5px solid black;
+    border: 5px solid black;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: rgba(255, 255, 0, 0.51);
     transition: all 400ms ease-in;
 }
-.btn_style:hover{
+
+.btn_style:hover {
     color: white;
     border-top-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    border:5px solid rgb(207, 198, 31);
+    border: 5px solid rgb(207, 198, 31);
     background-color: rgba(12, 12, 11, 0.51);
 }
 
-.text_content_box{
-    background-color: rgba(0, 0, 255, 0.61);
+.text_content_selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  flex-direction: column;
+  gap: 30px;
     width: 100%;
-    height: auto;
-    max-width: 40%;
-    padding:20px;
+    max-width: 60%;
 }
 
 
+.text_content_box {
+    margin-top: 30PX;
+    font-size: 24px;
+    background-color: rgba(0, 0, 255, 0.61);
+    width: 100%;
+    height: auto;
+    max-width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+à
 .d_none {
     display: none;
 }

@@ -153,11 +153,12 @@ function filterBtnEvent(index) {
         currentStand = "lebensmittel2actuelle";
         renderTextContent(lebensmittel2, wirkung2)
     } else if (index == 3) {
-        currentStand = "lebensmittel2actuelle";
+        currentStand = "lebensmittel3actuelle";
         renderTextContent(lebensmittel3, wirkung3);
     }
 }
 
+//Header Render======================================
 function renderHeaderContent() {
     let headerContentBtn = document.getElementById("header_btn_box")
     headerContentBtn.innerHTML = getHeaderCotentBtn();
@@ -172,14 +173,14 @@ function getHeaderCotentBtn() {
     </div>
     `
 }
-
+//================================================================
 
 // Render Text left
 function renderTextContent(arrLebensmittel, arrWirkung) {
     let renderTextRef = document.getElementById("text_content_box");
     renderTextRef.innerHTML = "";
     for (let index = 0; index < arrLebensmittel.length; index++) {
-        renderTextRef.innerHTML = getRandomText(index, arrLebensmittel, arrWirkung);
+        renderTextRef.innerHTML += getRandomText(index, arrLebensmittel, arrWirkung);
     }
 }
 
@@ -192,8 +193,30 @@ function getRandomText(i, leben, wirk) {
 }
 //====================================================================================
 
+function renderTextinsideOverlay(index, situation){
+    let textRandomInsideOverlay = document.getElementById("overlay");
+    textRandomInsideOverlay.innerHTML = "";
+
+    if (situation === "lebensmittel1actuelle") {
+        descriptionText = beschreibung1[index];
+    } else if (situation === "lebensmittel2actuelle") {
+        descriptionText = beschreibung2[index];
+    } else if(situation === "lebensmittel3actuelle"){
+        descriptionText = beschreibung3[index];
+    }
+    textRandomInsideOverlay.innerHTML += getRandomTextInsideOverlay(descriptionText);
+    toggleOverlay();
+}
+
+function getRandomTextInsideOverlay(text){
+    return`
+    <p onclick="toggleOverlay()" style="p_text-inside_overlay">${text}</p>
+    `
+}
+
 function toggleOverlay(){
     let overlayToggle = document.getElementById("overlay");
+
     overlayToggle.classList.toggle('d_none');
 }
 
