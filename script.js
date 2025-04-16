@@ -158,6 +158,10 @@ let lebensmittel1 = [
     }
   }
 
+function renderHeaderContent(){
+
+}
+
 
   // Render Text left
   function renderTextContent(arrLebensmittel, arrWirkung){
@@ -176,3 +180,8 @@ function getRandomText(i,leben,wirk){
     `
 }
 //====================================================================================
+
+
+function init(){
+    
+}
