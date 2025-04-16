@@ -157,5 +157,13 @@ let lebensmittel1 = [
         renderTextContent(lebensmittel3,wirkung3);
     }
   }
-  
+
+  function renderTextContent(arrLebensmittel, arrWirkung){
+    let renderTextRef = document.getElementById("text_content_box");
+    renderTextRef.innerHTML = "";
+    for (let index = 0; index < arrLebensmittel.length; index++) {
+        renderTextRef.innerHTML=getRandomText(index,arrLebensmittel,arrWirkung);
+        
+    }
+}
 
