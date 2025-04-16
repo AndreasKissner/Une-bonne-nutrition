@@ -142,20 +142,20 @@ let lebensmittel1 = [
     "Le miel est un édulcorant naturel aux propriétés antibactériennes et apaisantes. Il peut calmer la toux, adoucir la gorge et fournir une source rapide d’énergie. Il contient aussi des antioxydants et peut être utilisé comme alternative au sucre dans les boissons, les desserts ou en soin pour la peau."
   ];
   
-
-
   let currentStand ="";
-
   let descriptionText = "";
-
-
-
+  
   function filterBtnEvent(index){
-
     if( index == 1 ){
         currentStand = "lebensmittel1actuelle";
         renderTextContent(lebensmittel1,wirkung1);
+    } else if (index == 2){
+        currentStand = "lebensmittel2actuelle";
+        renderTextContent(lebensmittel2,wirkung2)
+    } else if ( index == 3){
+        currentStand = "lebensmittel2actuelle";
+        renderTextContent(lebensmittel3,wirkung3);
     }
-
   }
+  
 
