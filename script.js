@@ -192,6 +192,15 @@ function getRandomText(i, leben, wirk) {
 }
 //====================================================================================
 
+function toggleOverlay(){
+    let overlayToggle = document.getElementById("overlay");
+    overlayToggle.classList.toggle('d_none');
+}
+
+function bubbleEventStop(event){
+    event.stopPropagtion(event);
+}
+
 
 function init() {
     renderHeaderContent()
