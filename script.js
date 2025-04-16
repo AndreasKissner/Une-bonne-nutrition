@@ -153,8 +153,8 @@ let lebensmittel1 = [
   function filterBtnEvent(index){
 
     if( index == 1 ){
-        currentStand = "lebensmittel1actuelle"
-
+        currentStand = "lebensmittel1actuelle";
+        renderTextContent(lebensmittel1,wirkung1);
     }
 
   }
