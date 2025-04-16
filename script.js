@@ -158,12 +158,21 @@ let lebensmittel1 = [
     }
   }
 
+
+  // Render Text left
   function renderTextContent(arrLebensmittel, arrWirkung){
     let renderTextRef = document.getElementById("text_content_box");
     renderTextRef.innerHTML = "";
     for (let index = 0; index < arrLebensmittel.length; index++) {
         renderTextRef.innerHTML=getRandomText(index,arrLebensmittel,arrWirkung);
-        
     }
 }
 
+function getRandomText(i,leben,wirk){
+    return`<div onclick="renderTextinsideOverlay(${i}, '${currentStand}')" onclick="toggleOverlay" class ="text_content_box">
+    <h2>${leben[i]}</h2>
+    <h3>${wirk[i]}
+    </div>
+    `
+}
+//====================================================================================
